@@ -19,6 +19,7 @@ export default {
    head() {
       const meta = {
          title: "Dan's Projects",
+         description: this.projects[0].description,
          image:
             process.env.baseUrl +
             require(`~/assets/img/${this.projects[0].image}.png`),
@@ -26,9 +27,24 @@ export default {
       return {
          title: meta.title,
          meta: [
+            {
+               hid: 'description',
+               name: 'description',
+               content: meta.description,
+            },
             { hid: 'og:title', name: 'og:title', content: meta.title },
-            { hid: 'og:site_name', name: 'og:site_name', content: meta.title },
             { hid: 'og:image', name: 'og:image', content: meta.image },
+            { hid: 'og:site_name', name: 'og:site_name', content: meta.title },
+            {
+               hid: 'og:description',
+               name: 'og:description',
+               content: meta.description,
+            },
+            {
+               hid: 'twitter:description',
+               name: 'twitter:description',
+               content: meta.description,
+            },
             {
                hid: 'twitter:title',
                name: 'twitter:title',
