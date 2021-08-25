@@ -6,7 +6,7 @@
 
 <script>
 const meta = {
-   title: 'About Dan'
+   title: 'About Dan',
 };
 
 export default {
@@ -15,8 +15,8 @@ export default {
       meta: [
          { hid: 'og:title', name: 'og:title', content: meta.title },
          { hid: 'og:site_name', name: 'og:site_name', content: meta.title },
-         { hid: 'twitter:title', name: 'twitter:title', content: meta.title }
-      ]
-   }
+         { hid: 'twitter:title', name: 'twitter:title', content: meta.title },
+      ],
+   },
 };
 </script>

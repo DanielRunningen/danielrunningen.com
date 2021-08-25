@@ -13,13 +13,13 @@ export default {
          return this.tags.filter((t) => {
             return t.show;
          });
-      }
+      },
    },
    props: {
       tags: {
          default: [],
-         require: true
-      }
-   }
+         require: true,
+      },
+   },
 };
 </script>

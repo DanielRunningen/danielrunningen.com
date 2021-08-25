@@ -34,8 +34,8 @@ export default {
          default: 32,
          validator: function (value) {
             return value > 0;
-         }
-      }
-   }
+         },
+      },
+   },
 };
 </script>

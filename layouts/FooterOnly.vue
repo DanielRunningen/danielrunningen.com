@@ -13,9 +13,9 @@ export default {
       return {
          meta: [
             { hid: 'og:image', name: 'og:image', content: image },
-            { hid: 'twitter:image', name: 'twitter:image', content: image }
-         ]
+            { hid: 'twitter:image', name: 'twitter:image', content: image },
+         ],
       };
-   }
+   },
 };
 </script>

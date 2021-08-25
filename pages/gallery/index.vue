@@ -42,14 +42,14 @@ const meta = {
          photos.filter((p) => {
             return p.active;
          })[0].file
-      }.png`)
+      }.png`),
 };
 
 export default {
    data() {
       return {
          meta: meta,
-         photos: photos
+         photos: photos,
       };
    },
    head() {
@@ -59,7 +59,7 @@ export default {
             {
                hid: 'description',
                name: 'description',
-               content: meta.description
+               content: meta.description,
             },
             { hid: 'og:title', name: 'og:title', content: meta.title },
             { hid: 'og:image', name: 'og:image', content: meta.image },
@@ -67,21 +67,25 @@ export default {
             {
                hid: 'og:description',
                name: 'og:description',
-               content: meta.description
+               content: meta.description,
             },
             {
                hid: 'twitter:description',
                name: 'twitter:description',
-               content: meta.description
+               content: meta.description,
             },
             {
                hid: 'twitter:title',
                name: 'twitter:title',
-               content: meta.title
+               content: meta.title,
             },
-            { hid: 'twitter:image', name: 'twitter:image', content: meta.image }
-         ]
+            {
+               hid: 'twitter:image',
+               name: 'twitter:image',
+               content: meta.image,
+            },
+         ],
       };
-   }
+   },
 };
 </script>

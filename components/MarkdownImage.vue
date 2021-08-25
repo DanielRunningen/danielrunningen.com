@@ -15,31 +15,31 @@ export default {
          } else {
             return require(`~/assets/img/${this.src}`);
          }
-      }
+      },
    },
    props: {
       alt: {
          type: String,
          require: true,
-         validator: strValidator
+         validator: strValidator,
       },
       h: {
          type: String,
          require: false,
          default: 'auto',
-         validator: strValidator
+         validator: strValidator,
       },
       src: {
          type: String,
          require: true,
-         validator: strValidator
+         validator: strValidator,
       },
       w: {
          type: String,
          require: false,
          default: 'auto',
-         validator: strValidator
-      }
-   }
+         validator: strValidator,
+      },
+   },
 };
 </script>

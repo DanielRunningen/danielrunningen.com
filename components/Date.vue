@@ -12,7 +12,7 @@ export default {
          return `${date.getFullYear()}.${monthPad}${
             date.getMonth() + 1
          }.${dayPad}${date.getDate()}`;
-      }
+      },
    },
    props: {
       dateStr: {
@@ -20,8 +20,8 @@ export default {
          require: true,
          validator: function (value) {
             return value.length > 0;
-         }
-      }
-   }
+         },
+      },
+   },
 };
 </script>

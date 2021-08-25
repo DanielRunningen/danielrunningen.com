@@ -63,6 +63,6 @@
 
 <script>
 export default {
-   layout: 'FooterOnly'
+   layout: 'FooterOnly',
 };
 </script>

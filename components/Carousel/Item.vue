@@ -21,7 +21,7 @@ const strRequirements = {
    require: true,
    validator: function (value) {
       return value.length > 0;
-   }
+   },
 };
 
 export default {
@@ -29,7 +29,7 @@ export default {
       name: strRequirements,
       src: strRequirements,
       description: strRequirements,
-      details: strRequirements
-   }
+      details: strRequirements,
+   },
 };
 </script>
