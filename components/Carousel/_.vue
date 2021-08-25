@@ -32,7 +32,13 @@
 <script>
 export default {
    props: {
-      id: String
-   }
+      id: {
+         type: String,
+         require: true,
+         validator: function (value) {
+            return value.length > 0;
+         },
+      },
+   },
 };
 </script>
