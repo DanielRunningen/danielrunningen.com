@@ -1,5 +1,5 @@
 <template>
-   <Article :content="project" />
+   <ContentArticle :content="project" />
 </template>
 
 <script>
