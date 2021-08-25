@@ -1,0 +1,6 @@
+[submodule "assets"]
+	path = assets
+	url = https://DanielRunningen@github.com/DanielRunningen/danielrunningen.com-assets.git
+[submodule "content"]
+	path = content
+	url = https://DanielRunningen@github.com/DanielRunningen/danielrunningen.com-content.git
