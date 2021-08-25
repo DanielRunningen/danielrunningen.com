@@ -1,5 +1,5 @@
 <template>
-   <ContentArticle :content="project" />
+   <Article :content="project" />
 </template>
 
 <script>
@@ -8,8 +8,8 @@ export default {
       const p = await $content('projects', params.slug).fetch();
 
       return {
-         project: p
+         project: p,
       };
-   }
+   },
 };
 </script>
