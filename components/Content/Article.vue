@@ -1,15 +1,15 @@
 <template>
-   <main class="container-fluid">
+   <main class="px-5">
       <div class="row d-flex">
          <div class="col-lg-8">
-            <h1 class="text-primary pt-5">{{ content.title }}</h1>
-            <div class="fs-6 text-muted">
+            <h1 class="text-primary pt-4">{{ content.title }}</h1>
+            <div class="fs-6 text-muted pb-3">
                Initialized
                <Date class="text-info" :dateStr="content.createdAt" /> | Revised
                <Date class="text-info" :dateStr="content.updatedAt" />
             </div>
          </div>
-         <div class="col-lg-4 mt-lg-auto mt-4 h3 px-3" v-if="content.toc">
+         <div class="col-lg-4 mt-lg-auto mt-3 h3 px-3" v-if="content.toc">
             This Page
          </div>
       </div>
