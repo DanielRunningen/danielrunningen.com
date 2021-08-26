@@ -5,7 +5,7 @@ The main repo for the design and logic of [my personal website](https://www.dani
 ## Build Setup
 
 These notes are more for myself than anything else.
-Others will likely come accross issues with cloning and building because the `assets` and `content` subdirectories are private submodules.
+Others will likely come across issues with cloning and building because the `assets` and `content` subdirectories are private submodules.
 
 ### Clone Repo and Submodules
 

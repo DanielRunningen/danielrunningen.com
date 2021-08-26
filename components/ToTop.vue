@@ -69,7 +69,7 @@ export default {
             btn.classList.remove('in');
             btn.classList.add('out');
          }
-      }
-   }
+      },
+   },
 };
 </script>

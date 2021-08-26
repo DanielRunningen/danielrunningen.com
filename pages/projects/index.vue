@@ -1,50 +1,8 @@
 <template>
    <main class="container-fluid p-4">
+      <h1>Projects</h1>
       <div class="row g-3">
-         <div
-            class="card container-fluid p-0"
-            v-for="p in projects"
-            :key="p.slug"
-         >
-            <div class="row g-0">
-               <div class="col-md-4">
-                  <img
-                     :src="require(`~/assets/img/${p.image}.png`)"
-                     class="card-img-top"
-                     :alt="p.imageAlt"
-                     style="object-fit: cover; height: 100%"
-                  />
-               </div>
-               <div class="col-md-8">
-                  <div class="d-flex flex-column h-100">
-                     <div class="card-body flex-shrink-0">
-                        <div class="card-title h2 text-primary">
-                           {{ p.title }}
-                        </div>
-                        <Tags
-                           class="card-subtitle text-info m-0 pb-3"
-                           :tags="p.tags"
-                        />
-                        <nuxt-content
-                           class="card-text m-0"
-                           :document="{ body: p.excerpt }"
-                        />
-                     </div>
-                     <div
-                        class="
-                           card-footer
-                           d-flex
-                           justify-content-between
-                           mt-auto
-                        "
-                     >
-                        <Date :dateStr="p.createdAt" />
-                        <NuxtLink :to="p.path">Read More</NuxtLink>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
+         <ContentCard v-for="p in projects" :key="p.slug" :content="p" />
       </div>
    </main>
 </template>
@@ -55,30 +13,50 @@ export default {
       const p = await $content('projects').sortBy('createdAt', 'desc').fetch();
 
       return {
-         projects: p
+         projects: p,
       };
    },
    head() {
       const meta = {
          title: "Dan's Projects",
+         description: this.projects[0].description,
          image:
             process.env.baseUrl +
-            require(`~/assets/img/${this.projects[0].image}.png`)
+            require(`~/assets/img/${this.projects[0].image}.png`),
       };
       return {
          title: meta.title,
          meta: [
+            {
+               hid: 'description',
+               name: 'description',
+               content: meta.description,
+            },
             { hid: 'og:title', name: 'og:title', content: meta.title },
-            { hid: 'og:site_name', name: 'og:site_name', content: meta.title },
             { hid: 'og:image', name: 'og:image', content: meta.image },
+            { hid: 'og:site_name', name: 'og:site_name', content: meta.title },
+            {
+               hid: 'og:description',
+               name: 'og:description',
+               content: meta.description,
+            },
+            {
+               hid: 'twitter:description',
+               name: 'twitter:description',
+               content: meta.description,
+            },
             {
                hid: 'twitter:title',
                name: 'twitter:title',
-               content: meta.title
+               content: meta.title,
             },
-            { hid: 'twitter:image', name: 'twitter:image', content: meta.image }
-         ]
+            {
+               hid: 'twitter:image',
+               name: 'twitter:image',
+               content: meta.image,
+            },
+         ],
       };
-   }
+   },
 };
 </script>

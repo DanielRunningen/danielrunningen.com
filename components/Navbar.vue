@@ -40,11 +40,11 @@ export default {
          navTargets: [
             { name: 'Home', route: '/' },
             { name: 'About', route: '/about' },
+            { name: 'Blog', route: '/blog' },
             { name: 'Projects', route: '/projects' },
             { name: 'Gallery', route: '/gallery' },
-            { name: 'Blog', route: '/blog' }
-         ]
+         ],
       };
-   }
+   },
 };
 </script>

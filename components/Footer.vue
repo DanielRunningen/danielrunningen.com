@@ -33,7 +33,7 @@ export default {
    computed: {
       currentYear: function () {
          return new Date().getFullYear();
-      }
-   }
+      },
+   },
 };
 </script>

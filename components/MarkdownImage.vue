@@ -3,7 +3,7 @@
 </template>
 
 <script>
-const strValidator = function (value) {
+const nonZeroLength = function (value) {
    return value.length > 0;
 };
 
@@ -15,31 +15,31 @@ export default {
          } else {
             return require(`~/assets/img/${this.src}`);
          }
-      }
+      },
    },
    props: {
       alt: {
          type: String,
          require: true,
-         validator: strValidator
+         validator: nonZeroLength,
       },
       h: {
          type: String,
          require: false,
          default: 'auto',
-         validator: strValidator
+         validator: nonZeroLength,
       },
       src: {
          type: String,
          require: true,
-         validator: strValidator
+         validator: nonZeroLength,
       },
       w: {
          type: String,
          require: false,
          default: 'auto',
-         validator: strValidator
-      }
-   }
+         validator: nonZeroLength,
+      },
+   },
 };
 </script>

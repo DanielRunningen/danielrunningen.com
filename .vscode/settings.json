@@ -2,5 +2,22 @@
    "editor.formatOnSave": true,
    "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
-   }
+   },
+   "markdownlint.config": {
+      "MD007": {
+         "indent": 3,
+      },
+      "MD013": false,
+   },
+   "cSpell.words": [
+      "Celithemis",
+      "Gridsome",
+      "Nuxt",
+      "Quantaray",
+      "Vite",
+      "fasciata",
+      "nuxtjs",
+      "prismjs",
+      "towners"
+   ],
 }

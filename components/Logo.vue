@@ -30,12 +30,12 @@ export default {
    props: {
       height: {
          type: Number,
-         require: true,
+         require: false,
          default: 32,
          validator: function (value) {
             return value > 0;
-         }
-      }
-   }
+         },
+      },
+   },
 };
 </script>
