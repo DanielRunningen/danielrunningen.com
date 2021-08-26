@@ -7,7 +7,7 @@
          :alt="item.name"
          onContextMenu="return false;"
       />
-      <div class="bg-secondary p-5" style="min-height: 35vh">
+      <div class="p-5" style="min-height: 35vh">
          <div class="fs-2">{{ item.name }}</div>
          <div class="fs-5 text-info">
             {{ `${item.date} - ${item.medium}` }}
