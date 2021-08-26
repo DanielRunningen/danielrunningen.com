@@ -1,13 +1,10 @@
 <template>
-   <main>
-      <div class="container-fluid px-0">
-         <div v-for="g in genres" :key="g.slug">
-            <div class="p-5 bg-secondary text-primary">
-               <h2>{{ g.title }}</h2>
-               <nuxt-content :document="{ body: g.body }" />
-            </div>
-            <Carousel :content="g.data" :parentSlug="g.slug" />
-         </div>
+   <main class="p-4">
+      <h1 class="text-center">Art Gallery</h1>
+      <div class="card text-primary" v-for="g in genres" :key="g.slug">
+         <h2 class="card-title my-3 px-3">{{ g.title }}</h2>
+         <nuxt-content class="mb-2 px-3" :document="{ body: g.body }" />
+         <Carousel :content="g.data" :parentSlug="g.slug" />
       </div>
    </main>
 </template>
