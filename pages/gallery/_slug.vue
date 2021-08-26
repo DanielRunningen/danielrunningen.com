@@ -1,10 +1,10 @@
 <template>
    <main>
       <div class="p-5">
-         <h1>{{ g.title }}</h1>
-         <nuxt-content :document="{ body: g.body }" />
+         <h1>{{ genre.title }}</h1>
+         <nuxt-content :document="{ body: genre.body }" />
       </div>
-      <Carousel :content="g.data" parentSlug="gallery" />
+      <Carousel :content="genre.data" :parentSlug="genre.slug" />
    </main>
 </template>
 
@@ -12,7 +12,6 @@
 export default {
    async asyncData({ $content, params }) {
       const g = await $content('gallery', params.slug).fetch();
-
       return {
          genre: g,
       };
