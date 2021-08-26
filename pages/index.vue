@@ -42,7 +42,7 @@
          </div>
       </div>
       <div class="row-col fs-1 py-5">I like to make things.</div>
-      <div class="row pb-5 mx-5">
+      <div class="row pb-5 mx-3">
          <router-link class="col text-primary" to="/blog">
             <i class="bi-file-post-fill fs-1" />
             <div class="fs-3">Blog</div>
