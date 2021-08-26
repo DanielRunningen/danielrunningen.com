@@ -1,6 +1,6 @@
 <template>
-   <main>
-      <div class="position-relative overflow-hidden text-center">
+   <main class="text-center">
+      <div class="position-relative overflow-hidden">
          <img
             class="img-fluid"
             src="~/assets/img/CoralBanner.png"
@@ -41,22 +41,20 @@
             Daniel Runningen
          </div>
       </div>
-      <div class="row-col bg-secondary text-center fs-1 py-5">
-         I like to make things.
-      </div>
-      <div class="row bg-secondary text-center pb-5 m-0">
-         <div class="col">
-            <router-link class="text-primary" to="/gallery">
-               <i class="bi-camera-fill fs-1" />
-               <div class="fs-3">Gallery</div>
-            </router-link>
-         </div>
-         <div class="col">
-            <router-link class="text-primary" to="/projects">
-               <i class="bi-terminal-fill fs-1" />
-               <div class="fs-3">Projects</div>
-            </router-link>
-         </div>
+      <div class="row-col fs-1 py-5">I like to make things.</div>
+      <div class="row pb-5 mx-5">
+         <router-link class="col text-primary" to="/blog">
+            <i class="bi-file-post-fill fs-1" />
+            <div class="fs-3">Blog</div>
+         </router-link>
+         <router-link class="col text-primary" to="/projects">
+            <i class="bi-terminal-fill fs-1" />
+            <div class="fs-3">Projects</div>
+         </router-link>
+         <router-link class="col text-primary" to="/gallery">
+            <i class="bi-camera-fill fs-1" />
+            <div class="fs-3">Gallery</div>
+         </router-link>
       </div>
    </main>
 </template>
