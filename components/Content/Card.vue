@@ -44,7 +44,19 @@
 export default {
    props: {
       content: {
+         type: Object,
          require: true,
+         validator: function (value) {
+            return [
+               'title',
+               'description',
+               'image',
+               'imageAlt',
+               'createdAt',
+            ].every((p) => {
+               return p in value;
+            });
+         },
       },
    },
 };

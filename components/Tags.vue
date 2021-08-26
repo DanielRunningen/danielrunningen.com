@@ -17,8 +17,11 @@ export default {
    },
    props: {
       tags: {
-         default: [],
+         type: Array,
          require: true,
+         validator: function (value) {
+            return value.length > 0;
+         },
       },
    },
 };

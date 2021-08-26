@@ -97,7 +97,22 @@ export default {
    },
    props: {
       content: {
+         type: Object,
          require: true,
+         validator: function (value) {
+            return [
+               'title',
+               'description',
+               'image',
+               'imageAlt',
+               'createdAt',
+               'updatedAt',
+               'toc',
+               'body',
+            ].every((p) => {
+               return p in value;
+            });
+         },
       },
    },
 };
