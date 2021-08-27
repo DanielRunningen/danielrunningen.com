@@ -22,7 +22,7 @@ export default {
          description: this.projects[0].description,
          image:
             process.env.baseUrl +
-            require(`~/assets/img/${this.projects[0].image}.png`),
+            require(`~/assets/img/${this.projects[0].image}`),
       };
       return {
          title: meta.title,

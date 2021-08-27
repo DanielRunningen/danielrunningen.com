@@ -32,7 +32,7 @@
          <div class="col-lg-8 order-lg-1">
             <div class="lead m-3">{{ content.description }}</div>
             <img
-               :src="require(`~/assets/img/${content.image}.png`)"
+               :src="require(`~/assets/img/${content.image}`)"
                :alt="content.imageAlt"
                class="mb-4 w-100"
             />
@@ -56,8 +56,7 @@ import 'prismjs/plugins/line-highlight/prism-line-highlight.js';
 export default {
    head() {
       const image =
-         process.env.baseUrl +
-         require(`~/assets/img/${this.content.image}.png`);
+         process.env.baseUrl + require(`~/assets/img/${this.content.image}`);
       return {
          title: this.content.title,
          meta: [

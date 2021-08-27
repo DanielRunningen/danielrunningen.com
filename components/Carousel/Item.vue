@@ -3,7 +3,7 @@
       <img
          class="d-block w-100 py-3 bg-primary"
          style="height: 65vh"
-         :src="require(`~/assets/img/${src}.png`)"
+         :src="require(`~/assets/img/${src}`)"
          :alt="item.name"
          onContextMenu="return false;"
       />
@@ -22,7 +22,9 @@ export default {
    computed: {
       src: function () {
          return `${this.parent}/${
-            this.item.file ? this.item.file : this.item.name.replace(/\s+/g, '')
+            this.item.file
+               ? this.item.file
+               : this.item.name.replace(/\s+/g, '') + '.png'
          }`;
       },
    },

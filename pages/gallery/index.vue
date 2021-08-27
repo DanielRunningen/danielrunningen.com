@@ -29,8 +29,8 @@ export default {
          image:
             process.env.baseUrl +
             require(`~/assets/img/${g.slug}/${
-               img.file ? img.file : img.name.replace(/\s+/g, '')
-            }.png`),
+               img.file ? img.file : img.name.replace(/\s+/g, '') + '.png'
+            }`),
       };
       return {
          title: meta.title,

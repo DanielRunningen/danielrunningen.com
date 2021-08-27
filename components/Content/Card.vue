@@ -3,7 +3,7 @@
       <div class="row g-0">
          <div class="col-md-4">
             <img
-               :src="require(`~/assets/img/${content.image}.png`)"
+               :src="require(`~/assets/img/${content.image}`)"
                class="card-img-top"
                :alt="content.imageAlt"
                style="object-fit: cover; height: 100%"
