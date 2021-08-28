@@ -3,7 +3,7 @@
       <div class="row d-flex">
          <div class="col-lg-8">
             <h1 class="text-primary mt-4">{{ content.title }}</h1>
-            <div class="fs-6 text-muted mb-3">
+            <div class="fs-6 text-muted">
                Initialized
                <Date class="text-info" :dateStr="content.createdAt" /> | Revised
                <Date class="text-info" :dateStr="content.updatedAt" />
