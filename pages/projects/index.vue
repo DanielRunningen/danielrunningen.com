@@ -1,6 +1,6 @@
 <template>
-   <main class="container-fluid p-4">
-      <h1>Projects</h1>
+   <main class="p-4">
+      <h1 class="text-center">Previous Projects</h1>
       <div class="row g-3">
          <ContentCard v-for="p in projects" :key="p.slug" :content="p" />
       </div>
@@ -22,7 +22,7 @@ export default {
          description: this.projects[0].description,
          image:
             process.env.baseUrl +
-            require(`~/assets/img/${this.projects[0].image}.png`),
+            require(`~/assets/img/${this.projects[0].image}`),
       };
       return {
          title: meta.title,

@@ -2,8 +2,8 @@
    <main class="px-5">
       <div class="row d-flex">
          <div class="col-lg-8">
-            <h1 class="text-primary pt-4">{{ content.title }}</h1>
-            <div class="fs-6 text-muted pb-3">
+            <h1 class="text-primary mt-4">{{ content.title }}</h1>
+            <div class="fs-6 text-muted">
                Initialized
                <Date class="text-info" :dateStr="content.createdAt" /> | Revised
                <Date class="text-info" :dateStr="content.updatedAt" />
@@ -30,9 +30,9 @@
             </div>
          </nav>
          <div class="col-lg-8 order-lg-1">
-            <div class="lead p-3">{{ content.description }}</div>
+            <div class="lead m-3">{{ content.description }}</div>
             <img
-               :src="require(`~/assets/img/${content.image}.png`)"
+               :src="require(`~/assets/img/${content.image}`)"
                :alt="content.imageAlt"
                class="mb-4 w-100"
             />
@@ -56,8 +56,7 @@ import 'prismjs/plugins/line-highlight/prism-line-highlight.js';
 export default {
    head() {
       const image =
-         process.env.baseUrl +
-         require(`~/assets/img/${this.content.image}.png`);
+         process.env.baseUrl + require(`~/assets/img/${this.content.image}`);
       return {
          title: this.content.title,
          meta: [

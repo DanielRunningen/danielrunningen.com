@@ -1,22 +1,22 @@
 <template>
-   <ContentArticle :content="project" />
+   <ContentArticle :content="article" />
 </template>
 
 <script>
 export default {
    async asyncData({ $content, params }) {
-      const p = await $content('projects', params.slug).fetch();
+      const a = await $content('blog', params.slug).fetch();
 
       return {
-         project: p,
+         article: a,
       };
    },
    head() {
       const meta = {
-         title: this.project.title,
-         description: this.project.description,
+         title: this.article.title,
+         description: this.article.description,
          image:
-            process.env.baseUrl + require(`~/assets/img/${this.project.image}`),
+            process.env.baseUrl + require(`~/assets/img/${this.article.image}`),
       };
       return {
          title: meta.title,

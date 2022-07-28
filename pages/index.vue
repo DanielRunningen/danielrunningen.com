@@ -42,17 +42,17 @@
          </div>
       </div>
       <div class="row-col fs-1 py-5">I like to make things.</div>
-      <div class="row pb-5 mx-5">
+      <div class="row pb-5 mx-3">
          <router-link class="col text-primary" to="/blog">
-            <i class="bi-file-post-fill fs-1" />
+            <i class="bi-file-post-fill fs-1" aria-hidden="true" />
             <div class="fs-3">Blog</div>
          </router-link>
          <router-link class="col text-primary" to="/projects">
-            <i class="bi-terminal-fill fs-1" />
+            <i class="bi-terminal-fill fs-1" aria-hidden="true" />
             <div class="fs-3">Projects</div>
          </router-link>
          <router-link class="col text-primary" to="/gallery">
-            <i class="bi-camera-fill fs-1" />
+            <i class="bi-camera-fill fs-1" aria-hidden="true" />
             <div class="fs-3">Gallery</div>
          </router-link>
       </div>

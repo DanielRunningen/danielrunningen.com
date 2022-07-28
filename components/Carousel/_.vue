@@ -1,6 +1,6 @@
 <template>
    <div
-      class="carousel slide carousel-fade carousel-dark bg-primary"
+      class="carousel slide carousel-fade carousel-dark"
       :id="parentSlug"
       data-bs-ride="carousel"
       data-bs-interval="10000"
