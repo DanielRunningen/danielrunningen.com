@@ -32,7 +32,7 @@
                </div>
                <div class="card-footer d-flex justify-content-between mt-auto">
                   <Date :dateStr="content.createdAt" />
-                  <NuxtLink :to="content.path">Read More</NuxtLink>
+                  <NuxtLink v-if="!content.hasOwnProperty('readMore') || content.readMore" :to="content.path">Read More</NuxtLink>
                </div>
             </div>
          </div>

@@ -1,5 +1,13 @@
 <template>
-   <img :src="imgSrc" :alt="alt" :style="`height: ${h}; width: ${w}`" />
+   <a :href="href">
+      <div class="text-center">
+         <img
+            :src="imgSrc"
+            :alt="alt"
+            :style="`height: ${h}; width: ${w}; border-radius: ${r};`"
+         />
+      </div>
+   </a>
 </template>
 
 <script>
@@ -27,6 +35,18 @@ export default {
          type: String,
          require: false,
          default: 'auto',
+         validator: nonZeroLength,
+      },
+      href: {
+         type: String,
+         require: false,
+         default: 'javascript:void(0);',
+         validator: nonZeroLength,
+      },
+      r: {
+         type: String,
+         require: false,
+         default: '0',
          validator: nonZeroLength,
       },
       src: {
