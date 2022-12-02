@@ -22,7 +22,7 @@ export default {
       });
       const meta = {
          title: this.genre.title,
-         description: this.genre.excerpt,
+         description: this.genre.description,
          image:
             process.env.baseUrl +
             require(`~/assets/img/${this.genre.slug}/${
