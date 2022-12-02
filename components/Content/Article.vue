@@ -30,7 +30,15 @@
             </div>
          </nav>
          <div class="col-lg-8 order-lg-1">
-            <div class="lead m-3">{{ content.description }}</div>
+            <div
+               class="lead m-3"
+               v-if="
+                  content.descriptionInArticle == null ||
+                  content.descriptionInArticle
+               "
+            >
+               {{ content.description }}
+            </div>
             <img
                :src="require(`~/assets/img/${content.image}`)"
                :alt="content.imageAlt"
