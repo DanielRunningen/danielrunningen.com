@@ -42,6 +42,7 @@ export default {
          link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico', },
             { hid: 'canonical', rel: 'canonical', href: path, },
+            { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css' },
          ],
          script: [
             { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js', },
@@ -78,6 +79,12 @@ export default {
          prism: {
             theme: 'prism-themes/themes/prism-material-oceanic.css'
          },
+         remarkPlugins: [
+            'remark-math'
+         ],
+         rehypePlugins: [
+           'rehype-katex'
+         ],
          tocDepth: 4,
       }
    },
