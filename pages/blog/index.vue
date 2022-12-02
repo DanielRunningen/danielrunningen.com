@@ -1,6 +1,6 @@
 <template>
    <main class="p-4">
-      <h1 class="text-center">Blog Posts</h1>
+      <h1 class="text-center mb-5">Blog Posts</h1>
       <div class="row g-3">
          <ContentCard v-for="p in posts" :key="p.slug" :content="p" />
       </div>

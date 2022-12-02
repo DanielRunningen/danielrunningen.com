@@ -1,6 +1,6 @@
 <template>
    <main class="p-4">
-      <h1 class="text-center">Art Gallery</h1>
+      <h1 class="text-center mb-4">Art Gallery</h1>
       <div class="card text-primary" v-for="g in genres" :key="g.slug">
          <h2 class="card-title my-3 px-3">{{ g.title }}</h2>
          <nuxt-content class="mb-2 px-3" :document="{ body: g.body }" />
