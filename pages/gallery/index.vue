@@ -25,7 +25,7 @@ export default {
       });
       const meta = {
          title: "Dan's Gallery",
-         description: g.excerpt,
+         description: g.description,
          image:
             process.env.baseUrl +
             require(`~/assets/img/${g.slug}/${
