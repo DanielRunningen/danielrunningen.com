@@ -1,6 +1,6 @@
 <template>
    <main class="p-4">
-      <h1 class="text-center">Previous Projects</h1>
+      <h1 class="text-center mb-5">Previous Projects</h1>
       <div class="row g-3">
          <ContentCard v-for="p in projects" :key="p.slug" :content="p" />
       </div>
